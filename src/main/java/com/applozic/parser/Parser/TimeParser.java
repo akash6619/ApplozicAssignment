@@ -13,6 +13,7 @@ public class TimeParser {
         List<DateGroup> groups = parser.parse(text);
         if(groups.isEmpty()) {
             System.out.println("Can't detect time info.");
+			return;
         }
         groups.stream().forEach(group ->{
             List<Date> dates = group.getDates();
